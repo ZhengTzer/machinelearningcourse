@@ -24,19 +24,9 @@ async function app() {
   };
 
   // When clicking a button, add an example for that class.
-  document.getElementById('class-a-1').addEventListener('click', () => addExample(1));
-  document.getElementById('class-b-1').addEventListener('click', () => addExample(2));
-  document.getElementById('class-c-1').addEventListener('click', () => addExample(3));
-
-  document.getElementById('class-a-2').addEventListener('click', () => addExample(4));
-  document.getElementById('class-b-2').addEventListener('click', () => addExample(5));
-  document.getElementById('class-c-2').addEventListener('click', () => addExample(6));
-
-  document.getElementById('class-a-3').addEventListener('click', () => addExample(7));
-  document.getElementById('class-b-3').addEventListener('click', () => addExample(8));
-  document.getElementById('class-c-3').addEventListener('click', () => addExample(9));
-
-  document.getElementById('class-d').addEventListener('click', () => addExample(10));
+  document.getElementById('class-a').addEventListener('click', () => addExample(1));
+  document.getElementById('class-b').addEventListener('click', () => addExample(2));
+  document.getElementById('class-c').addEventListener('click', () => addExample(3));
   // Add the first 30 frames so that it represents no action
   var i;
   for (i = 0; i < 30; i++) {
@@ -50,7 +40,7 @@ async function app() {
       // Get the most likely class and confidences from the classifier module.
       const result = await classifier.predictClass(activation);
 
-      const classes = ['Blank', 'A - Blue', 'B - Blue', 'C - Blue', 'A - Red', 'B - Red', 'C - Red', 'A - Green', 'B - Green', 'C - Green'];
+      const classes = ['Blank', 'Rock', 'Paper', 'Scissor'];
       document.getElementById('console').innerText = `
         prediction: ${classes[result.classIndex]}\n
         probability: ${result.confidences[result.classIndex]}
