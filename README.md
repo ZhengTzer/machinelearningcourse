@@ -1,4 +1,4 @@
-# machinelearningcourse
+# Machine Learning
 Machine learning\
 Week 01 - Build a simple image classifier as a web app\
 Week 02 - Build 3 different types of regression lines to predict stock prices using Python\
