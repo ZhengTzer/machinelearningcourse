@@ -8,3 +8,5 @@ Week 05 - Midterm (resume-scanner)\
 Week 06 - Use Tensorflow+Keras to create a Generative Adversarial Network\
 Week 07 - Soon\
 Week 08 - Soon\
+Week 09 - Soon\
+Week 10 - Soon
