@@ -7,6 +7,6 @@ Week 04 - Retrain the 'inception v3' image classifier on the pneumonia dataset u
 Week 05 - Midterm (resume-scanner)\
 Week 06 - Use Tensorflow+Keras to create a Generative Adversarial Network\
 Week 07 - Build a neural network using numpy\
-Week 08 - Soon\
-Week 09 - Soon\
+Week 08 - Dialogflow\
+Week 09 - Cartpole\
 Week 10 - Soon
