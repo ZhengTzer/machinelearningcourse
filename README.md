@@ -8,5 +8,5 @@ Week 05 - Midterm (resume-scanner)\
 Week 06 - Use Tensorflow+Keras to create a Generative Adversarial Network\
 Week 07 - Build a neural network using numpy\
 Week 08 - Dialogflow\
-Week 09 - Cartpole\
+Week 09 - OpenAI Gym (cartpole)\
 Week 10 - Soon
