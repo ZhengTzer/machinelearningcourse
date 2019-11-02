@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 # Ignore warnings
 import warnings
 warnings.filterwarnings('ignore')
@@ -18,10 +12,6 @@ from keras.optimizers import Adam
 from mish import Mish
 import matplotlib.pyplot as plt
 
-
-# In[2]:
-
-
 # Environment
 env = gym.make('CartPole-v1')
 state_size = env.observation_space.shape[0]
@@ -32,10 +22,6 @@ seed = 10
 env.seed(seed)
 random.seed(seed)
 np.random.seed(seed)
-
-
-# In[3]:
-
 
 # Training parameterss
 discount_factor = 0.99
@@ -48,10 +34,6 @@ n_episodes = 3000
 n_win_ticks = 195
 n_avg_scores = 100
 render = False
-
-
-# In[4]:
-
 
 # Build model
 def build_model():
@@ -71,10 +53,6 @@ target_model = build_model()
 
 model.summary()
 
-
-# In[5]:
-
-
 def update_target_model():
     target_model.set_weights(model.get_weights())
 
@@ -92,10 +70,6 @@ def train_replay():
     Q_sa = target_model.predict(state_t1)
     targets[range(batch_size), action_t] = reward_t + discount_factor * np.max(Q_sa, axis=1) * np.invert(terminal)
     model.train_on_batch(state_t, targets)
-
-
-# In[6]:
-
 
 # Training
 avg_scores = []
@@ -143,13 +117,10 @@ def learn_to_balance():
 
                 if e % n_avg_scores == 0:
                     print('[Episode {}] Average Score: {}'.format(e, avg_score))
-
-
 learn_to_balance()
 
-# Plot results
-plt.figure(figsize=(12,6))
+# Plot
+plt.figure(figsize=(15,10))
 plt.plot(all_scores, color='blue')
 plt.plot(avg_scores, color='red')
 plt.show()
-
